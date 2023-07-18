@@ -24,9 +24,10 @@ BTGreen.addEventListener('click', function () {
     BTGreen.classList.toggle('active');
 });
 
+let intervalId;
 BTFlashing.addEventListener('click', function () {
     BTFlashing.classList.toggle('active');
-    document.getElementById('BTSequence').setAttribute("disabled","disabled");
+    BTSequence.disabled = true;
     if (BTFlashing.classList.contains('active')) {
         intervalId = setInterval(function () {
             redLight.classList.toggle('red');
@@ -41,31 +42,39 @@ BTFlashing.addEventListener('click', function () {
         BTRed.classList.remove('active');
         BTYellow.classList.remove('active');
         BTGreen.classList.remove('active');
+        BTSequence.disabled = false;
     }
 });
 
-/* BTSequence.addEventListener('click', function () {
+BTSequence.addEventListener('click', function () {
     BTSequence.classList.toggle('active');
+    BTFlashing.disabled = true;
     if (BTSequence.classList.contains('active')) {
         intervalId = setInterval(function () {
-            redLight.classList.toggle('red');
-            yellowLight.classList.toggle('yellow');
-            greenLight.classList.toggle('green')
-        }, 500);
-        intervalId = setInterval(function () {
-            
-            yellowLight.classList.toggle('yellow');
-            
-        }, 1000);
-
-        intervalId = setInterval(function () {
-            
-            greenLight.classList.toggle('green')
+            redLight.classList.add('red');
+            setTimeout(function () {
+                BTRed.classList.remove('active');
+                redLight.classList.remove('red');
+                yellowLight.classList.add('yellow');
+                setTimeout(function () {
+                    BTYellow.classList.remove('active');
+                    yellowLight.classList.remove('yellow');
+                    greenLight.classList.add('green');
+                    setTimeout(function () {
+                        BTGreen.classList.remove('active');
+                        greenLight.classList.remove('green');
+                    }, 500);
+                }, 500);
+            }, 500);
         }, 1500);
     } else {
         clearInterval(intervalId);
         redLight.classList.remove('red');
         yellowLight.classList.remove('yellow');
-        greenLight.classList.remove('green')
+        greenLight.classList.remove('green');
+        BTRed.classList.remove('active');
+        BTYellow.classList.remove('active');
+        BTGreen.classList.remove('active');
+        BTFlashing.disabled = false;
     }
-}); */
+});

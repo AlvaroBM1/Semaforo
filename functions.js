@@ -78,3 +78,32 @@ BTSequence.addEventListener('click', function () {
         BTFlashing.disabled = false;
     }
 });
+
+/* BTSequence.addEventListener('click', function () {
+    BTSequence.classList.toggle('active');
+    BTFlashing.disabled = true;
+    if (BTSequence.classList.contains('active')) {
+        const $circleLights = document.querySelectorAll('.light');
+        let contador = 0;
+
+        const lightSequence = () => {
+            $circleLights[contador].className = 'light';
+            contador++;
+
+            if (contador > 2) contador = 0;
+
+            const actualLight = $circleLights[contador];
+            actualLight.classList.add(actualLight.getAttribute('color'))
+        }
+        setInterval(lightSequence, 1000)
+    } else {
+        clearInterval(intervalId);
+        redLight.classList.remove('red');
+        yellowLight.classList.remove('yellow');
+        greenLight.classList.remove('green');
+        BTRed.classList.remove('active');
+        BTYellow.classList.remove('active');
+        BTGreen.classList.remove('active');
+        BTFlashing.disabled = false;
+    }
+}); */

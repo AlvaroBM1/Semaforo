@@ -36,14 +36,17 @@
 
 .red {
     background-color: red;
+    box-shadow: 0 0 10px #ff1900;
 }
 
 .yellow {
     background-color: yellow;
+    box-shadow: 0 0 10px #fbff00;
 }
 
 .green {
     background-color: green;
+    box-shadow: 0 0 10px #00ff00;
 }
 
 .pole {
@@ -105,4 +108,12 @@
 
 .button.active {
     background-color: #3e8e41 !important;
+}
+
+.titulo {
+    background-color: rgb(1, 73, 117);
+    margin: 0 0 0 0;
+    padding-left: 50%;
+    padding-top: 10px;
+    font-family: monospace;
 }

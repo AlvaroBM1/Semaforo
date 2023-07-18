@@ -38,6 +38,9 @@ BTFlashing.addEventListener('click', function () {
         redLight.classList.remove('red');
         yellowLight.classList.remove('yellow');
         greenLight.classList.remove('green')
+        BTRed.classList.remove('active');
+        BTYellow.classList.remove('active');
+        BTGreen.classList.remove('active');
     }
 });
 

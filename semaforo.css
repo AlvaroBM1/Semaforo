@@ -103,3 +103,6 @@
     background-color: #3e8e41;
 }
 
+.button.active {
+    background-color: #3e8e41 !important;
+}

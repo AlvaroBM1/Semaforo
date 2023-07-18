@@ -13,29 +13,30 @@
     <div class="flex">
         <div class="container">
             <div class="traffic-light">
-                <div class="light gray"></div>
-                <div class="light gray"></div>
-                <div class="light gray"></div>
+                <div id="redLight" class="light gray"></div>
+                <div id="yellowLight"class="light gray"></div>
+                <div id="greenLight" class="light gray"></div>
             </div>
             <div class="pole"></div>
             <div class="base"></div>
         </div>
         <div class="container-buttons">
             <div class="group">
-                <button class="button">Red Change</button>
-                <button class="button">Yellow Change</button>
-                <button class="button">Green Change</button>
+                <button id="BTRed" class="button">Red Change</button>
+                <button id="BTYellow" class="button">Yellow Change</button>
+                <button id="BTGreen"class="button">Green Change</button>
             </div>
             <div class="group">
-                <button class="button">Lights Flashing</button>
-                <button class="button">Stop Lights Flashing</button>
+                <button id="BTFlashing" class="button">Lights Flashing</button>
+                <!--<button class="button">Stop Lights Flashing</button>-->
             </div>
             <div class="group">
-                <button class="button">Lights Sequence</button>
-                <button class="button">Stop Lights Sequence</button>
+                <button id="BTSequence" class="button">Lights Sequence</button>
+                <!--<button class="button">Stop Lights Sequence</button>-->
             </div>
         </div>
     </div>
+    <script src="functions.js"></script>
 </body>
 
 </html>
